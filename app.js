@@ -18,6 +18,6 @@ app.post('/', function (req, res) {
 app.get("/bmi", function (req, res) {
     res.sendFile(__dirname + "/bmiCalculator.html");
 });
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("server started runing at port 3000");
 });
