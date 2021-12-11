@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 3000;
 
 const app = express(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,6 +19,6 @@ app.post('/', function (req, res) {
 app.get("/bmi", function (req, res) {
     res.sendFile(__dirname + "/bmiCalculator.html");
 });
-app.listen(port, function () {
-    console.log("server started runing at port 3000");
+app.listen(PORT, function () {
+    console.log("server started runing at port "+PORT);
 });
